@@ -1,0 +1,15 @@
+/Users/vika/Projects/Task_2_2/Task_2_2/bin/Debug/net6.0/Task_2_2
+/Users/vika/Projects/Task_2_2/Task_2_2/bin/Debug/net6.0/Task_2_2.deps.json
+/Users/vika/Projects/Task_2_2/Task_2_2/bin/Debug/net6.0/Task_2_2.runtimeconfig.json
+/Users/vika/Projects/Task_2_2/Task_2_2/bin/Debug/net6.0/Task_2_2.dll
+/Users/vika/Projects/Task_2_2/Task_2_2/bin/Debug/net6.0/Task_2_2.pdb
+/Users/vika/Projects/Task_2_2/Task_2_2/obj/Debug/net6.0/Task_2_2.csproj.AssemblyReference.cache
+/Users/vika/Projects/Task_2_2/Task_2_2/obj/Debug/net6.0/Task_2_2.GeneratedMSBuildEditorConfig.editorconfig
+/Users/vika/Projects/Task_2_2/Task_2_2/obj/Debug/net6.0/Task_2_2.AssemblyInfoInputs.cache
+/Users/vika/Projects/Task_2_2/Task_2_2/obj/Debug/net6.0/Task_2_2.AssemblyInfo.cs
+/Users/vika/Projects/Task_2_2/Task_2_2/obj/Debug/net6.0/Task_2_2.csproj.CoreCompileInputs.cache
+/Users/vika/Projects/Task_2_2/Task_2_2/obj/Debug/net6.0/Task_2_2.dll
+/Users/vika/Projects/Task_2_2/Task_2_2/obj/Debug/net6.0/refint/Task_2_2.dll
+/Users/vika/Projects/Task_2_2/Task_2_2/obj/Debug/net6.0/Task_2_2.pdb
+/Users/vika/Projects/Task_2_2/Task_2_2/obj/Debug/net6.0/Task_2_2.genruntimeconfig.cache
+/Users/vika/Projects/Task_2_2/Task_2_2/obj/Debug/net6.0/ref/Task_2_2.dll
