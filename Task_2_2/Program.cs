@@ -185,94 +185,102 @@ namespace Task_2_2
         }
         static void Main(string[] args)
         {
-            Program program = new Program();
-            List<Team> teams = new List<Team>();
-            Team testTeam = new Team("testTeam");
-            Console.WriteLine("Перелік дій:\n" +
-                "Додати команду\n" +
-                "Додати співробітника в існуючу команду\n" +
-                "Додати WorkDay співробітника в існуючу команду\n" +
-                "Вивести дані про команду\n" +
-                "Вивести детальні дані про команду\n");
-            bool controller;
-            do
+            try
             {
- 
-                Console.WriteLine("Введіть дію з переліку вище");
-                string command = Console.ReadLine()!;
-                if (command == "Додати команду")
+                Program program = new Program();
+                List<Team> teams = new List<Team>();
+                Team testTeam = new Team("testTeam");
+                Console.WriteLine("Перелік дій:\n" +
+                    "1 - Додати команду\n" +
+                    "2 - Додати співробітника в існуючу команду\n" +
+                    "3 - Додати WorkDay співробітника в існуючу команду\n" +
+                    "4 - Вивести дані про команду\n" +
+                    "5 - Вивести детальні дані про команду\n");
+                bool controller;
+                do
                 {
-                    Console.WriteLine("Введіть назву команди");
-                    string name = Console.ReadLine()!;
-                    teams.Add(new Team(name));
-                }
-                else if (command == "Додати співробітника в існуючу команду")
-                {
-                    
-                    testTeam = program.FindTeam(teams);
-                    if (testTeam != null)
+
+                    Console.WriteLine("Введіть дію з переліку вище");
+                    string command = Console.ReadLine()!;
+                    if (command == "1")
                     {
-                        program.addWorker(testTeam);
+                        Console.WriteLine("Введіть назву команди");
+                        string name = Console.ReadLine()!;
+                        teams.Add(new Team(name));
                     }
-                    else
+                    else if (command == "2")
                     {
-                        Console.WriteLine("Команду не знайдено");
-                    }
-                }
-                else if (command == "Додати WorkDay співробітника в існуючу команду")
-                {
-                    testTeam = program.FindTeam(teams);
-                    if (testTeam != null)
-                    {
-                        Worker testWorker = program.FindWorker(testTeam);
-                        if (testWorker != null)
+
+                        testTeam = program.FindTeam(teams);
+                        if (testTeam != null)
                         {
-                            Console.WriteLine("Введіть WorkDay");
-                            string workDay = Console.ReadLine()!;
-                            testWorker.setWorkDay(workDay);
+                            program.addWorker(testTeam);
                         }
                         else
                         {
-                            Console.WriteLine("Працівника не знайдено");
+                            Console.WriteLine("Команду не знайдено");
+                        }
+                    }
+                    else if (command == "3")
+                    {
+                        testTeam = program.FindTeam(teams);
+                        if (testTeam != null)
+                        {
+                            Worker testWorker = program.FindWorker(testTeam);
+                            if (testWorker != null)
+                            {
+                                Console.WriteLine("Введіть WorkDay");
+                                string workDay = Console.ReadLine()!;
+                                testWorker.setWorkDay(workDay);
+                            }
+                            else
+                            {
+                                Console.WriteLine("Працівника не знайдено");
+                            }
+                        }
+                        else
+                        {
+                            Console.WriteLine("Команду не знайдено");
+                        }
+                    }
+                    else if (command == "4")
+                    {
+                        testTeam = program.FindTeam(teams);
+                        if (testTeam != null)
+                        {
+                            testTeam.WriteTeamInfo();
+                        }
+                        else
+                        {
+                            Console.WriteLine("Команду не знайдено");
+                        }
+                    }
+                    else if (command == "5")
+                    {
+                        testTeam = program.FindTeam(teams);
+                        if (testTeam != null)
+                        {
+                            testTeam.WriteDetailedTeamInfo();
+                        }
+                        else
+                        {
+                            Console.WriteLine("Команду не знайдено");
                         }
                     }
                     else
                     {
-                        Console.WriteLine("Команду не знайдено");
+                        Console.WriteLine("Такої дії немає");
                     }
+                    Console.WriteLine("Ввести дію? (true - якщо так, false - якщо ні)");
+                    controller = Convert.ToBoolean(Console.ReadLine());
                 }
-                else if (command == "Вивести дані про команду")
-                {
-                    testTeam = program.FindTeam(teams);
-                    if (testTeam != null)
-                    {
-                        testTeam.WriteTeamInfo();
-                    }
-                    else
-                    {
-                        Console.WriteLine("Команду не знайдено");
-                    }
-                }
-                else if (command == "Вивести детальні дані про команду")
-                {
-                    testTeam = program.FindTeam(teams);
-                    if (testTeam != null)
-                    {
-                        testTeam.WriteDetailedTeamInfo();
-                    }
-                    else
-                    {
-                        Console.WriteLine("Команду не знайдено");
-                    }
-                }
-            else
-                {
-                    Console.WriteLine("Такої дії немає");
-                }
-                Console.WriteLine("Ввести дію? (true - якщо так, false - якщо ні)");
-                controller = Convert.ToBoolean(Console.ReadLine());
+                while (controller);
             }
-            while (controller);
+            catch (FormatException)
+            {
+                Console.WriteLine("Помилака введення - неправильний формат");
+            }
+            
         }
     }
 }

@@ -1,10 +1,10 @@
 ﻿<Properties StartupConfiguration="{4B46272D-F4E4-4E12-9FA7-F5FA66B79E6C}|Default">
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Task__2__2 PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.Workbench ActiveDocument="Task_2_2/Program.cs">
     <Files>
-      <File FileName="Task_2_2/Program.cs" Line="232" Column="60" />
+      <File FileName="Task_2_2/Program.cs" Line="124" Column="33" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -19,9 +19,9 @@
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <Xamarin.Addins.Core.Project ActiveDebugTarget="MyMacID" />
   <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
-  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.ItemProperties.Task__2__2 PreferredExecutionTarget="MonoDevelop.Default" />
 </Properties>
